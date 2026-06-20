@@ -16,15 +16,15 @@ const Navbar = () => {
         <nav className="bg-gray-900 shadow-lg">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-between items-center py-4 gap-4">
-                    <Link to="/" className="text-white text-2xl font-bold flex items-center gap-2">
+                   <a href="/" className="text-white text-2xl font-bold flex items-center gap-2">
                         <FaTicketAlt /> Eventora
-                    </Link>
+                    </a>
                     <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                         <Link to="/" className="text-gray-200 hover:text-white transition cursor-pointer">Events</Link>
                         {user ? (
                             <>
                                 <Link to={user.role === 'admin' ? '/admin' : '/dashboard'} className="text-gray-200 hover:text-white transition">Dashboard</Link>
-                                <button onClick={handleLogout} className="bg-gray-700 hover:bg-black text-white px-4 py-2 rounded-md transition">Logout</button>
+                                <button onClick={handleLogout} className="bg-gray-700 hover:bg-zinc-100 hover:text-zinc-950 text-white px-4 py-2 rounded-md transition cursor-pointer">Logout</button>
                             </>
                         ) : (
                             <>
